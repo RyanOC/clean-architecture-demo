@@ -25,9 +25,11 @@ namespace CleanArchitecture.Service.DependencyResolution {
     public class DefaultRegistry : Registry {
         #region Constructors and Destructors
 
-        public DefaultRegistry() {
+        public DefaultRegistry()
+        {
             Scan(
-                scan => {
+                scan =>
+                {
                     scan.TheCallingAssembly();
 
                     scan.WithDefaultConventions();

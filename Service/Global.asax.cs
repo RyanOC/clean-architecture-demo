@@ -15,7 +15,11 @@ namespace CleanArchitecture.Service
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // Stop IIS/Asp.Net breaking our routes
+            //RouteTable.Routes.RouteExistingFiles = true;
+
         }
     }
 }
